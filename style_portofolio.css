@@ -407,6 +407,12 @@ h2.card__title.desain{
     object-fit: cover; /* Opsional, gunakan untuk memotong gambar agar pas di container */
 }
 
+/* .card.scroll-container {
+    max-height: 400px; 
+    overflow: hidden; 
+    position: relative;
+} */
+
 
 
 .row.row-cols-1.row-cols-md-2.g-4 .card{
@@ -706,7 +712,7 @@ h2.card__title{
 
 
 /* skills section styling */
-.skills{
+/* .skills{
     background: #d9d9d9;
     height: 100vh;
 }
@@ -782,7 +788,7 @@ h2.card__title{
 }
 .skills-content .right .mysql::before{
     width: 60%;
-}
+} */
 
 
 
@@ -1031,6 +1037,51 @@ footer span a:hover{
     .navbar .menu{
         padding-left: 0;
     }
+/* --------------------------------- */
+    .card__iframe {
+        width: 420px;
+        height: 328px;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        display: block;
+        margin: auto;
+    }
+
+    .card__data {
+        width: 400px;
+        background-color: white;
+        padding: 1.5rem 1.5rem;
+        box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+        border-radius: 1rem;
+        position: absolute;
+        bottom: -9rem;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        opacity: 0;
+        transition: opacity 1s 1s;
+        z-index: 1000;
+      }
+
+      .card_website_img.video:hover{
+        transform: scale(1.1);
+        transition: ease .5s;
+        box-shadow: 0 10px 20px rgb(255, 0, 0);
+    }
+    
+    .card_website_img.website:hover{
+        transform: scale(1.1);
+        transition: ease .5s;
+        box-shadow: 0 10px 20px rgba(0, 179, 255, 0.855);
+    }
+    .card.img.desain:hover{
+        transform: scale(1.1);
+        transition: ease .5s;
+        box-shadow: 0 10px 20px orangered;
+    }
+
+/* --------------------------------- */
+
 }
 
 @media (max-width: 500px) {
