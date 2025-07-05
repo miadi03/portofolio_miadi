@@ -433,6 +433,16 @@ h2.card__title{
     border: none;
 }
 
+.btn-tutup{
+    padding: 7px;
+    color: #fff;
+    background: rgb(253, 185, 11);
+    border-radius: 5px;
+    border: none;
+}
+
+
+
 .card.card-body1, .card.card-body2, .card.card-body3, .card.card-body4, .card.card-body5{
     background-color: transparent;
 }
@@ -539,41 +549,62 @@ h2.card__title{
 
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 /* --------------------------------------------------- */
 
 
-  /*  animasi hover */
-  .card__article:hover .card__data {
-    animation: show-data 1s forwards;
+
+/* --------------------------------------------------- */
+
+/* Card default state */
+.card__article .card__data {
+    opacity: 0;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.8s ease;
+    pointer-events: none;
+  }
+  
+  /* Saat class .show ditambahkan lewat JS */
+  .card__article.show .card__data {
     opacity: 1;
-    transition: opacity .3s;
+    transform: translateY(-7rem);
+    pointer-events: auto;
   }
   
-  .card__article:hover {
-    animation: remove-overflow 2s forwards;
+  /* Kontrol overflow saat tampil */
+  .card__article.show {
+    overflow: initial;
   }
   
-  .card__article:not(:hover) {
-    animation: show-overflow 2s forwards;
+  /* Kontrol overflow saat disembunyikan */
+  .card__article:not(.show) {
+    overflow: hidden;
   }
   
-  .card__article:not(:hover) .card__data {
-    animation: remove-data 1s forwards;
-  }
+  /* --------------------------------------------------- */
   
-  /* Card animation */
+  /* Animasi tambahan jika ingin (bisa disesuaikan) */
   @keyframes show-data {
     50% {
       transform: translateY(-10rem);
     }
     100% {
       transform: translateY(-7rem);
-    }
-  }
-  
-  @keyframes remove-overflow {
-    to {
-      overflow: initial;
     }
   }
   
@@ -589,15 +620,8 @@ h2.card__title{
     }
   }
   
-  @keyframes show-overflow {
-    0% {
-      overflow: initial;
-      pointer-events: none;
-    }
-    50% {
-      overflow: hidden;
-    }
-  }
+  /* ================================================ */
+  
 
 
 
