@@ -180,7 +180,7 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("images/bg.jpg") no-repeat center;
+    background: url("img/MIADI/bg.jpg") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -398,6 +398,8 @@ h2.card__title.desain{
     overflow: hidden;
     display: block;
 }
+
+
 
 .card-img {
     width: 100%; /* Mengikuti lebar container */
